@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор: Оцените доход</title>
+    <link rel="stylesheet" href="./bower_components/normalize.css/normalize.css"/>
+    <link rel="stylesheet" href="./bower_components/nouislider/distribute/nouislider.min.css"/>
+    <link rel="stylesheet" href="./styles/style.css"/>
+</head>
+<body>
+    <img class="pif-calc" src="./img/pif_calc.png" alt=""/>
+    <div class="page">
+        <div class="main-header">
+            калькулятор
+            <h1 class="main-header__title">
+                Оцените потенциальный доход
+            </h1>
+        </div>
+        <div class="calc">
+            <div class="form">
+                <form action="/" id="invest_form">
+                    <div class="form__rubrics">
+                        <div class="form__title">
+                            Выберите инвестиционный фонд
+                        </div>
+                        <div class="form__rubrics-col">
+                            <label class="radio">
+                                <input type="radio" class="radio__input" name="fund_name" value="tech" data-bind="checked: selectedFund"/>
+                                <span class="radio__text">Технологии</span>
+                            </label>
+                        </div>
+                        <div class="form__rubrics-col">
+                            <label class="radio">
+                                <input type="radio" class="radio__input" name="fund_name" value="foreign" data-bind="checked: selectedFund"/>
+                                <span class="radio__text">Зарубежные рынки</span>
+                            </label>
+                        </div>
+                        <div class="form__rubrics-col">
+                            <label class="radio">
+                                <input type="radio" class="radio__input" name="fund_name" value="global" data-bind="checked: selectedFund"/>
+                                <span class="radio__text">Глобальные рынки</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form__budget">
+                        <div class="form__budget-field">
+                            <label class="form__budget-label">
+                                Сумма для инвестирования
+                            </label>
+                            <input type="text" id="capital_input" data-bind="value: capital" class="form__budget-input"/>
+                        </div>
+                        <div class="form__slider">
+                            <div class="slider noUi-extended" id="slider"></div>
+                        </div>
+                    </div>
+
+                    <div class="form__period">
+                        <div class="form__title">
+                            Выберите срок инвестирования
+                        </div>
+                        <div class="form__button-radio-group">
+                            <label class="form__button-radio">
+                                <input class="form__button-radio-input" type="radio" value="3" name="period" data-bind="checked: selectedPeriod"/>
+                                <span class="form__button-radio-text">
+                                    3 мес.
+                                </span>
+                            </label>
+                            <label class="form__button-radio">
+                                <input class="form__button-radio-input" type="radio" value="6" name="period" data-bind="checked: selectedPeriod"/>
+                                <span class="form__button-radio-text">
+                                    6 мес.
+                                </span>
+                            </label>
+                            <label class="form__button-radio">
+                                <input class="form__button-radio-input" type="radio" value="12" name="period" data-bind="checked: selectedPeriod"/>
+                                <span class="form__button-radio-text">
+                                    1 год
+                                </span>
+                            </label>
+                            <label class="form__button-radio">
+                                <input class="form__button-radio-input" type="radio" value="24" name="period" data-bind="checked: selectedPeriod"/>
+                                <span class="form__button-radio-text">
+                                    2 года
+                                </span>
+                            </label>
+                            <label class="form__button-radio">
+                                <input class="form__button-radio-input" type="radio" value="36" name="period" data-bind="checked: selectedPeriod"/>
+                                <span class="form__button-radio-text">
+                                    3 года
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="result">
+                <div class="result__bars">
+                    <div class="result__bars-col">
+                        <div class="result__bars-graph">
+                            <div class="result__bars-income">
+                                <div class="result__bars-title">
+                                    Доход
+                                    <span class="result__bars-title-val">
+                                        58 000 Р
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result__bars-col">
+                        <div class="result__bars-graph">
+                            <div class="result__bars-income" style="height: 32px;">
+                                <div class="result__bars-title">
+                                    Доход
+                                    <span class="result__bars-title-val">
+                                        58 000 Р
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="result__bottom">
+                    <div class="result__income-perc">
+                        Доход в процентах <span class="result__income-perc-val">23%</span>
+                    </div>
+                    <div class="result__income">
+                        Вы получите
+                        <div class="result__income-val">
+                            158 000 Р
+                        </div>
+                    </div>
+                    <button class="btn">
+                        Получить
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./bower_components/nouislider/distribute/nouislider.js"></script>
+    <script type="text/javascript" src="./bower_components/wnumb/wNumb.js"></script>
+    <script type="text/javascript" src="./bower_components/knockout/dist/knockout.js"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
+</body>
+</html>

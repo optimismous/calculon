@@ -1,0 +1,71 @@
+.pif-calc {
+    display: none;
+    position: absolute;
+    //opacity: 0.5;
+    left: 460px;
+    top: -103px;
+}
+
+$text-color: #002a61;
+$active-button-color: #4992ff;
+$active-text-color: white;
+$border-color: #9ea9b8;
+$grey-color: #acacac;
+
+@import "./common/mixins";
+
+.page {
+    width: 960px;
+}
+
+@font-face {
+    font-family: 'FuturaNewBook';
+    src: url('./../fonts/FuturaNewBook.otf');
+}
+
+@font-face {
+    font-family: 'FuturaNewMedium';
+    src: url('./../fonts/FuturaNewMedium.otf');
+}
+
+@font-face {
+    font-family: 'FuturaNewLight';
+    src: url('./../fonts/FuturaNewLight.otf');
+}
+
+body {
+    font-family: 'FuturaNewBook', Georgia, Tahoma, sans-serif;
+    font-size: 19.99px;
+    color: $text-color;
+}
+
+.main-header {
+    font-size: 17.98px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.main-header__title {
+    font-size: 70.02px;
+    font-weight: normal;
+    margin: 0;
+    text-transform: none;
+}
+
+.btn {
+    font-family: 'FuturaNewMedium', sans-serif;
+    font-size: 18px;
+    background-color: #ffc300;
+    width: 251px;
+    height: 46px;
+    color: #002a61;
+    border: none;
+    border-radius: 30px;
+    text-transform: uppercase;
+}
+
+@import "modules/calc";
+@import "modules/checkbox";
+@import "modules/radio-button";
+@import "modules/result";
+@import "modules/noui-extend";

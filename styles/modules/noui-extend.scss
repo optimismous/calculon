@@ -1,0 +1,67 @@
+/*
+  Custom styles for noUI slider
+*/
+
+.noUi-extended {
+  &.noUi-horizontal {
+    height: 3px;
+
+    .noUi-background {
+      background-color: $grey-color;
+    }
+
+    .noUi-handle {
+      height: 29px;
+      width: 29px;
+      left: -14.5px;
+      top: -14.5px;
+      box-shadow: none;
+      border-radius: 50%;
+
+      &:before {
+        display: none;
+        //left: 12px;
+      }
+
+      &:after {
+        display: none;
+        //left: 14px;
+      }
+    }
+  }
+
+  &.noUi-target {
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+  }
+
+  &.noUi-target.noUi-connect {
+    box-shadow: none;
+  }
+
+  .noUi-pips {
+
+    &.noUi-pips-horizontal {
+      padding-top: 19px;
+    }
+
+    .noUi-marker-large {
+      display: none;
+    }
+
+    .noUi-value {
+      width: 50px;
+    }
+
+    .noUi-value-large {
+      font-size: 16px;
+      color: $text-color;
+    }
+
+    .noUi-value-horizontal {
+      padding-top: 0;
+      margin-left: -25px;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.form__button-radio-input {
+  display: none;
+}
+
+.form__button-radio-group {
+  font-size: 0;
+}
+
+.form__button-radio-text {
+  display: inline-block;
+  border: 1px solid #9EA9B9;
+  border-radius: 40px;
+  text-align: center;
+  font-size: 16.02px;
+  cursor: pointer;
+  margin-left: 13px;
+
+  .form__button-radio-input:checked + & {
+    background-color: #4992ff;
+    border-color: #4992ff;
+    color: white;
+  }
+
+  .form__button-radio:first-child & {
+    margin-left: 0;
+  }
+}

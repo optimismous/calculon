@@ -1,0 +1,9 @@
+.form__button-radio-input {
+  display: none; }
+
+.form__button-radio-text {
+  display: inline-block;
+  border: 1px solid #9EA9B9;
+  border-radius: 50%; }
+  .form__button-radio-input:checked + .form__button-radio-text {
+    background-color: #4992ff; }

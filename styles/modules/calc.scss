@@ -1,0 +1,87 @@
+// fixme
+.page {
+    position: relative;
+    z-index: 2;
+    margin-left: 0px;
+}
+
+.calc {
+    overflow: hidden;
+    border: 1px solid #d7dadd;
+}
+
+.form {
+    float: left;
+    width: 565px;
+    height: 630px;
+    background-color: #f7f7f7;
+    border-right: 1px solid #ccd4df;
+}
+
+.form__rubrics {
+    padding: 33px 28px;
+    overflow: hidden;
+}
+
+.form__rubrics-col {
+    float: left;
+    width: 33.333%;
+}
+
+.form__budget {
+    overflow: hidden;
+    background-color: #e7e8ea;
+    border: 1px solid $border-color;
+    border-width: 1px 0;
+    padding: 28px 28px;
+}
+
+.form__budget-field {
+    @include clearfix;
+    margin-bottom: 50px;
+}
+
+.form__budget-label {
+    float: left;
+}
+
+.form__budget-input {
+    font-size: 29.98px;
+    float: right;
+    border-radius: 40px;
+    height: 44px;
+    width: 211px;
+    margin-top: -11px;
+    padding-left: 40px;
+    padding-right: 40px;
+    box-sizing: border-box;
+    border: 1px solid $border-color;
+}
+
+.form__slider {
+    @include clearfix;
+    min-height: 51px;
+}
+
+.form__period {
+    padding: 33px 28px 95px;
+}
+
+.form__title {
+    margin-bottom: 38px;
+}
+
+.form__button-radio {
+
+}
+
+.form__button-radio-text {
+    width: 87px;
+    line-height: 31px;
+    border-radius: 50%;
+
+    .form__button-radio._active {
+        background-color: $active-button-color;
+        color: $active-text-color;
+    }
+}

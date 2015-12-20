@@ -1,0 +1,15 @@
+.result {
+  float: right;
+  width: 392px; }
+
+.result__bars-col {
+  float: left;
+  width: 149px;
+  background-color: #c9ccd1;
+  margin-left: 23px; }
+
+.result__bars-graph {
+  height: 143px; }
+
+.result__bars-title-val {
+  display: block; }
