@@ -48,10 +48,14 @@
                             <label class="form__budget-label">
                                 Сумма для инвестирования
                             </label>
-                            <input type="text" id="capital_input" data-bind="value: capital" class="form__budget-input"/>
+                            <input type="text"
+                                   id="capital_input"
+                                   data-bind="value: capital, inputmask: true"
+                                   maxlength="9"
+                                   class="form__budget-input"/>
                         </div>
                         <div class="form__slider">
-                            <div class="slider noUi-extended" id="slider"></div>
+                            <div class="slider noUi-extended" id="slider" data-bind="slider: capital()"></div>
                         </div>
                     </div>
 
@@ -100,9 +104,8 @@
                         <div class="result__bars-graph">
                             <div class="result__bars-income">
                                 <div class="result__bars-title">
-                                    Доход
-                                    <span class="result__bars-title-val">
-                                        58 000 Р
+                                    Вклад
+                                    <span class="result__bars-title-val" data-bind="text: capitalFormatted()">
                                     </span>
                                 </div>
                             </div>
@@ -110,11 +113,10 @@
                     </div>
                     <div class="result__bars-col">
                         <div class="result__bars-graph">
-                            <div class="result__bars-income" style="height: 32px;">
+                            <div class="result__bars-income" data-bind="style: { height: profit() * 90 / capital() + 'px' }">
                                 <div class="result__bars-title">
                                     Доход
-                                    <span class="result__bars-title-val">
-                                        58 000 Р
+                                    <span class="result__bars-title-val" data-bind="text: profitFormatted()">
                                     </span>
                                 </div>
                             </div>
@@ -123,13 +125,11 @@
                 </div>
                 <div class="result__bottom">
                     <div class="result__income-perc">
-                        Доход в процентах <span class="result__income-perc-val">23%</span>
+                        Доход в процентах <span class="result__income-perc-val" data-bind="text: rate() + '%'"></span>
                     </div>
                     <div class="result__income">
                         Вы получите
-                        <div class="result__income-val">
-                            158 000 Р
-                        </div>
+                        <div class="result__income-val" data-bind="text: incomeFormatted()"></div>
                     </div>
                     <button class="btn">
                         Получить
@@ -140,7 +140,10 @@
     </div>
     <script type="text/javascript" src="./bower_components/nouislider/distribute/nouislider.js"></script>
     <script type="text/javascript" src="./bower_components/wnumb/wNumb.js"></script>
+    <script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="./bower_components/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
     <script type="text/javascript" src="./bower_components/knockout/dist/knockout.js"></script>
+    <script type="text/javascript" src="./js/customBindings.js"></script>
     <script type="text/javascript" src="./js/app.js"></script>
 </body>
 </html>

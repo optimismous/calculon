@@ -3,7 +3,8 @@
     position: absolute;
     //opacity: 0.5;
     left: 460px;
-    top: -103px;
+    top: -100px;
+    z-index: 100;
 }
 
 $text-color: #002a61;
@@ -16,6 +17,8 @@ $grey-color: #acacac;
 
 .page {
     width: 960px;
+    margin: 0 auto;
+    padding-top: 52px;
 }
 
 @font-face {
@@ -40,13 +43,15 @@ body {
 }
 
 .main-header {
-    font-size: 17.98px;
+    font-size: 18px;
     text-align: center;
     text-transform: uppercase;
+    margin-bottom: 54px;
 }
 
 .main-header__title {
-    font-size: 70.02px;
+    font-family: 'FuturaNewLight', Georgia, Tahoma, sans-serif;
+    font-size: 70px;
     font-weight: normal;
     margin: 0;
     text-transform: none;

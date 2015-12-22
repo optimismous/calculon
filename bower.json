@@ -1,0 +1,26 @@
+{
+  "name": "Calculon",
+  "authors": [
+    "Igor Grekhov <igor.24ds@yandex.ru>"
+  ],
+  "description": "Investment Calculator",
+  "main": "app.js",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery.inputmask": "~3.2.5",
+    "nouislider": "~8.2.1",
+    "knockout": "~3.4.0",
+    "wnumb": "~1.0.2",
+    "normalize.css": "~3.0.3"
+  }
+}

@@ -20,12 +20,10 @@
 
       &:before {
         display: none;
-        //left: 12px;
       }
 
       &:after {
         display: none;
-        //left: 14px;
       }
     }
   }
@@ -57,6 +55,16 @@
     .noUi-value-large {
       font-size: 16px;
       color: $text-color;
+
+      &:last-child {
+        margin-left: -50px;
+      }
+    }
+
+    .noUi-marker-large:first-child {
+      & + .noUi-value-large {
+        margin-left: -10px;
+      }
     }
 
     .noUi-value-horizontal {

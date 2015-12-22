@@ -1,13 +1,7 @@
-// fixme
-.page {
-    position: relative;
-    z-index: 2;
-    margin-left: 0px;
-}
-
 .calc {
     overflow: hidden;
-    border: 1px solid #d7dadd;
+    border: 1px solid $border-color;
+    margin-bottom: 50px;
 }
 
 .form {
@@ -19,7 +13,7 @@
 }
 
 .form__rubrics {
-    padding: 33px 28px;
+    padding: 33px 28px 63px;
     overflow: hidden;
 }
 
@@ -52,10 +46,14 @@
     height: 44px;
     width: 211px;
     margin-top: -11px;
-    padding-left: 40px;
+    padding-left: 30px;
     padding-right: 40px;
     box-sizing: border-box;
     border: 1px solid $border-color;
+
+    &:focus {
+        outline: none;
+    }
 }
 
 .form__slider {

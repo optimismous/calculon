@@ -23,19 +23,21 @@
   background-color: white;
 }
 
-.result__bars-title-val {
-  display: block;
-}
-
 .result__bars-title {
+  font-family: 'FuturaNewLight', Georgia, sans-serif;
   position: absolute;
-  top: -54px;
+  top: -71px;
   left: 0;
   display: inline-block;
   width: 100%;
   vertical-align: bottom;
   text-align: center;
   line-height: normal;
+}
+
+.result__bars-title-val {
+  display: block;
+  font-size: 30px;
 }
 
 .result__bars-income {
