@@ -1,11 +1,23 @@
 .result {
   float: right;
   width: 392px;
+
+  @include breakpoint(max, 960px) {
+    float: none;
+    width: auto;
+    padding-bottom: 50px;
+  }
 }
 
 .result__bars {
   overflow: hidden;
+  width: 321px;
   margin-bottom: 38px;
+  margin-left: 23px;
+
+  @include breakpoint(max, 960px) {
+    margin: 0 auto 38px;
+  }
 }
 
 .result__bars-col {
@@ -15,6 +27,10 @@
   background-color: #c9ccd1;
   margin-left: 23px;
   text-align: center;
+
+  &:first-child {
+    margin-left: 0;
+  }
 }
 
 .result__bars-graph {
@@ -38,6 +54,7 @@
 .result__bars-title-val {
   display: block;
   font-size: 30px;
+  white-space: nowrap;
 }
 
 .result__bars-income {

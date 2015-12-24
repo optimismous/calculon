@@ -5,7 +5,7 @@
             investRatesMap: {
                 tech: 23,
                 foreign: 25,
-                global: 30
+                global: 26
             }
         };
 
@@ -15,7 +15,7 @@
     };
 
     var AppViewModel = function(app) {
-
+        this.isSliderUpdating = false;
         this.selectedFund = ko.observable('global');
         this.selectedPeriod = ko.observable('6');
         this.capital = ko.observable(200000)

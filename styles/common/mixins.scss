@@ -9,3 +9,9 @@
     clear: both;
   }
 }
+
+@mixin breakpoint($minOrMax, $vw) {
+  @media all and (#{$minOrMax}-width: $vw) {
+    @content;
+  }
+}

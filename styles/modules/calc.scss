@@ -10,6 +10,14 @@
     height: 630px;
     background-color: #f7f7f7;
     border-right: 1px solid #ccd4df;
+
+    @include breakpoint(max, 960px) {
+        width: auto;
+        height: auto;
+        float: none;
+        border-right: none;
+        border-bottom: 1px solid #ccd4df;
+    }
 }
 
 .form__rubrics {
@@ -20,6 +28,8 @@
 .form__rubrics-col {
     float: left;
     width: 33.333%;
+    min-width: 136px;
+    margin-top: 15px;
 }
 
 .form__budget {
@@ -37,6 +47,10 @@
 
 .form__budget-label {
     float: left;
+
+    @include breakpoint(max, 510px) {
+        float: none;
+    }
 }
 
 .form__budget-input {
@@ -46,13 +60,18 @@
     height: 44px;
     width: 211px;
     margin-top: -11px;
-    padding-left: 30px;
-    padding-right: 40px;
+    padding-left: 25px;
+    padding-right: 25px;
     box-sizing: border-box;
     border: 1px solid $border-color;
 
     &:focus {
         outline: none;
+    }
+
+    @include breakpoint(max, 510px) {
+        float: none;
+        margin-top: 12px;
     }
 }
 
@@ -62,11 +81,19 @@
 }
 
 .form__period {
-    padding: 33px 28px 95px;
+    padding: 33px 28px 73px;
+
+    @include breakpoint(max, 960px) {
+        padding-bottom: 50px;
+    }
 }
 
 .form__title {
     margin-bottom: 38px;
+
+    .form__rubrics & {
+        margin-bottom: 23px;
+    }
 }
 
 .form__button-radio {

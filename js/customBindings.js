@@ -28,7 +28,7 @@ ko.extenders.toNumber = function(target) {
 
             target(normalizedValue);
 
-            target.notifySubscribers(normalizedValue);
+            //target.notifySubscribers(normalizedValue);
         }
     }).extend({notify: 'always'});
 
@@ -71,13 +71,19 @@ ko.bindingHandlers.slider = {
 
         element.noUiSlider.on('update', function(values) {
             if (bindingContext.$data.capital() !== parseInt(values[0])) {
+                bindingContext.$data.isSliderUpdating = true;
                 bindingContext.$data.capital(values[0]);
+                bindingContext.$data.isSliderUpdating = false;
             }
         });
     },
 
     update: function(element, valueAccessor, allBindings, viewModel, bindingContext) {
-        element.noUiSlider.set(valueAccessor());
+        //console.log(!bindingContext.$data.isSliderUpdating);
+
+        //if (!bindingContext.$data.isSliderUpdating) {
+            element.noUiSlider.set(valueAccessor());
+        //}
     }
 };
 
@@ -97,7 +103,6 @@ ko.bindingHandlers.inputmask = {
                 } else {
                     observable(null);
                 }
-
             });
         }
 

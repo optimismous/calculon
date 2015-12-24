@@ -1,14 +1,12 @@
-.pif-calc {
-  display: none;
-  position: absolute;
-  left: 460px;
-  top: -100px;
-  z-index: 100; }
-
 .page {
   width: 960px;
+  min-width: 320px;
   margin: 0 auto;
   padding-top: 52px; }
+  @media all and (max-width: 960px) {
+    .page {
+      width: auto;
+      max-width: 750px; } }
 
 @font-face {
   font-family: 'FuturaNewBook';
@@ -62,6 +60,13 @@ body {
   height: 630px;
   background-color: #f7f7f7;
   border-right: 1px solid #ccd4df; }
+  @media all and (max-width: 960px) {
+    .form {
+      width: auto;
+      height: auto;
+      float: none;
+      border-right: none;
+      border-bottom: 1px solid #ccd4df; } }
 
 .form__rubrics {
   padding: 33px 28px 63px;
@@ -69,7 +74,9 @@ body {
 
 .form__rubrics-col {
   float: left;
-  width: 33.333%; }
+  width: 33.333%;
+  min-width: 136px;
+  margin-top: 15px; }
 
 .form__budget {
   overflow: hidden;
@@ -88,6 +95,9 @@ body {
 
 .form__budget-label {
   float: left; }
+  @media all and (max-width: 510px) {
+    .form__budget-label {
+      float: none; } }
 
 .form__budget-input {
   font-size: 29.98px;
@@ -96,12 +106,16 @@ body {
   height: 44px;
   width: 211px;
   margin-top: -11px;
-  padding-left: 30px;
-  padding-right: 40px;
+  padding-left: 25px;
+  padding-right: 25px;
   box-sizing: border-box;
   border: 1px solid #9ea9b8; }
   .form__budget-input:focus {
     outline: none; }
+  @media all and (max-width: 510px) {
+    .form__budget-input {
+      float: none;
+      margin-top: 12px; } }
 
 .form__slider {
   min-height: 51px; }
@@ -112,10 +126,15 @@ body {
     clear: both; }
 
 .form__period {
-  padding: 33px 28px 95px; }
+  padding: 33px 28px 73px; }
+  @media all and (max-width: 960px) {
+    .form__period {
+      padding-bottom: 50px; } }
 
 .form__title {
   margin-bottom: 38px; }
+  .form__rubrics .form__title {
+    margin-bottom: 23px; }
 
 .form__button-radio-text {
   width: 87px;
@@ -170,23 +189,34 @@ body {
   border: 1px solid #9EA9B9;
   border-radius: 40px;
   text-align: center;
-  font-size: 16.02px;
+  font-size: 16px;
   cursor: pointer;
-  margin-left: 13px; }
+  margin-right: 13px;
+  margin-bottom: 22px; }
   .form__button-radio-input:checked + .form__button-radio-text {
     background-color: #4992ff;
     border-color: #4992ff;
     color: white; }
-  .form__button-radio:first-child .form__button-radio-text {
-    margin-left: 0; }
+  .form__button-radio:last-child .form__button-radio-text {
+    margin-right: 0; }
 
 .result {
   float: right;
   width: 392px; }
+  @media all and (max-width: 960px) {
+    .result {
+      float: none;
+      width: auto;
+      padding-bottom: 50px; } }
 
 .result__bars {
   overflow: hidden;
-  margin-bottom: 38px; }
+  width: 321px;
+  margin-bottom: 38px;
+  margin-left: 23px; }
+  @media all and (max-width: 960px) {
+    .result__bars {
+      margin: 0 auto 38px; } }
 
 .result__bars-col {
   float: left;
@@ -195,6 +225,8 @@ body {
   background-color: #c9ccd1;
   margin-left: 23px;
   text-align: center; }
+  .result__bars-col:first-child {
+    margin-left: 0; }
 
 .result__bars-graph {
   height: 143px;
@@ -214,7 +246,8 @@ body {
 
 .result__bars-title-val {
   display: block;
-  font-size: 30px; }
+  font-size: 30px;
+  white-space: nowrap; }
 
 .result__bars-income {
   position: relative;
